@@ -9,10 +9,10 @@
 
 ## Description and File Structure
 
-   * Develped this famework based on the Page Object Model structure. 
-   * All object repositories mantain by the relavent pages.
+   * Developed this framework based on the Page Object Model structure. 
+   * All object repositories maintained by the relevant pages.
    * Main test cases written on the 'e2e' folder.
-   * Fixtures are use do the data driven test cases.
+   * Fixtures are used to do the data-driven test cases.
         
 ## Run Command
 
