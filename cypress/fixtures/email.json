@@ -1,0 +1,10 @@
+[
+    {
+        "email": "viku453@gmail.com",
+        "val":"valid"
+    },
+    {
+        "email": "niku453@.com",
+        "val":"invalid"
+    }
+]

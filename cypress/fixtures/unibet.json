@@ -1,0 +1,13 @@
+[
+    {
+        "fname": "viku",
+        "lname": "suga",
+        "email": "viku123@gmail.com",
+        "pw": "Vik@123sugi",
+        "day":"14",
+        "month":"April",
+        "year":"2000",
+        "emailVal":"false",
+        "gender":"Male"
+    }
+]
