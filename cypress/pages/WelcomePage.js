@@ -6,8 +6,7 @@ class WelcomePage{
         this.firstPromotion = "div[class='e57zfx40 css-1b8sbg0 e1pg1gpv0'] div[class='css-vvjid4 e1pg1gpv0']";
         this.IwantButton = ".css-1stnc37.euvk28v0";
         this.skipButton = ".css-uudof1.e1f6nj7d0";
-        this.firstPromo = "body > div:nth-child(4) > div:nth-child(5) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
-        //this.selectedButton = "div[data-dn='bonus-offer'] div[data-dn='bonus-selector']";
+        this.firstPromo = "body > div:nth-child(4) > div:nth-child(5) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)";
         this.selectedBtn = "//div[@class='css-1k1ocwi e1pg1gpv0']/../../..//span[text()='Selected']";
         this.cookiesbtn = "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll";
     }
@@ -35,11 +34,6 @@ class WelcomePage{
 
     iWantButtonColorValidation(){
         //cy.get(this.IwantButton).should('have.css', 'background-color', 'rgb(255, 231, 31)');
-
-        // cy.get(this.IwantButton).invoke('css', 'color').then((backgroundColor) => {
-        //     expect(backgroundColor).to.equal('rgb(17, 17, 17)');
-        // });
-
         this.colorValidationMethod(this.IwantButton, 'rgb(17, 17, 17)')
     }
 
@@ -58,8 +52,6 @@ class WelcomePage{
             expect(color).to.equal(calCode);
           });
     }
-
-
 }
 
 export default WelcomePage;

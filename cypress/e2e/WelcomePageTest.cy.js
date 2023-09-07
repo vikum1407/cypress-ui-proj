@@ -23,7 +23,7 @@ describe('Welcome Page Automation', ()=>{
         welcomePage.PromoValidation();
     })
 
-    it.only('Verify Fist Promotion Selected', ()=>{
+    it('Verify Fist Promotion Selected', ()=>{
         welcomePage.firstPromotionValidation();
     })
 
