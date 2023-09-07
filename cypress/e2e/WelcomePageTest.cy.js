@@ -7,7 +7,7 @@ describe('Welcome Page Automation', ()=>{
     
     beforeEach(() =>{
         cy.visit("https://www.unibet.co.uk/registration");
-        welcomePage.closeCookies();
+        //welcomePage.closeCookies();
         cy.clearCookies();
     })
 
