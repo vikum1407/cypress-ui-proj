@@ -1,10 +1,18 @@
 [
     {
-        "email": "viku453@gmail.com",
-        "val":"valid"
+        "email": "viku453@gmail",
+        "val":"false"
     },
     {
         "email": "niku453@.com",
-        "val":"invalid"
+        "val":"false"
+    },
+    {
+        "email": "@piku453@gmail.com",
+        "val":"false"
+    },
+    {
+        "email": "samarakonwijepalaniku453gmail.com",
+        "val":"false"
     }
 ]

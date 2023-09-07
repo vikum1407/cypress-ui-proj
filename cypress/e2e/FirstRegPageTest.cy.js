@@ -14,7 +14,7 @@ describe('First Registration Page Validation', () =>{
         welcomePage.clickSkipBtn();
     });
 
-    it('Visibility of the Registration page', () =>{
+    it('Validate registration step1 page', () =>{
         firstRegPage.validatePageLabel();
     });
 
@@ -22,7 +22,7 @@ describe('First Registration Page Validation', () =>{
         firstRegPage.validateStep1Btn();
     });
 
-    it.skip('Visibility of All Fields', () =>{
+    it('Validate of All Fields', () =>{
         firstRegPage.visibilityOfAllFields();
     });
 
@@ -30,17 +30,8 @@ describe('First Registration Page Validation', () =>{
         firstRegPage.validateContinueBtn();
     })
 
-    // it('Email Field Validation', () =>{
-        
-    //     firstRegPage.validateEmailField(true);
+    it('Email Field Validation', () =>{
 
-    //     firstRegPage.validateEmailField(false);
-    // })
-
-    it.only('Email Field Validation', () =>{
-        
-        //firstRegPage.validEmail('@vikum@gmail.com')
-        //firstRegPage.validateEmailField(true)
         cy.fixture('email.json').then((udata) =>{
             udata.forEach((uedata) =>{
                 firstRegPage.validateEmailField(uedata.val);
@@ -48,7 +39,7 @@ describe('First Registration Page Validation', () =>{
         })
     })
     
-    it('First Reg', ()=>{
+    it('First Reg. page', ()=>{
         firstRegPage.firstPageReg(false);
     })
 })

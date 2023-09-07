@@ -15,7 +15,6 @@ class FirstRegPage extends WelcomePage{
         this.yearDrp = "select[name='yearVal']";
         this.gender = "select[name='gender']";
         this.continueButton = ".e57zfx40.css-46l6sn.e1pg1gpv0";
-        //this.emailErrMsg = "[data-test-name='email-error-message']";
         this.emailErrMsg = ".css-6veg94";
         this.continueBtnColr = ".css-1kfapg1.euvk28v0";
     }
@@ -43,33 +42,11 @@ class FirstRegPage extends WelcomePage{
         cy.get(this.emailErrMsg).should('have.text', 'Please enter a valid email address.')
     }
 
-    /**Email Validation */
-
-
-    // validateEmailField(isValid) {
-
-    //     cy.fixture('email.json').then((edata) =>{
-    //         const mailValue = isValid ? edata.validEmail : edata.invalidEmail;
-
-    //         cy.get(this.email).type(mailValue);
-
-    //         if (isValid) {
-    //             cy.get(this.email).should('have.value', mailValue);
-    //             cy.get(this.email).clear();
-    //             cy.get(this.emailErrMsg).should('not.have.class', 'Please enter a valid email address.'); // Adjust this based on your app
-    //         } else {
-    //             //cy.get(this.email).should('have.value', mailValue);
-    //             cy.get(this.emailErrMsg).should('have.text', 'Please enter a valid email address.'); // Adjust this based on your app
-    //             //cy.get(this.email).clear();
-    //         }
-    //     })
-    // }
-
     validateEmailField(val){
 
         cy.fixture('email.json').then((edata) =>{
             edata.forEach((data) =>{
-                if(val=="valid"){
+                if(val==true){
                     cy.get(this.email).type(data.email);
                     cy.get(this.email).clear();
                 }else{
@@ -78,23 +55,8 @@ class FirstRegPage extends WelcomePage{
                     cy.get(this.email).clear();
                 }
             })
-        })
-        // const invalidValue = 'niku453@.com';
-        // cy.get(this.email).type(invalidValue);
-        
-        // cy.get(this.emailErrMsg).should('be.visible').and('contain', 'Please enter a valid email address.')
-        
+        })        
     }
-
-    validEmail(ml){
-        cy.get(this.email).type(ml).should(($element) =>{
-            const msg = $element.text();
-            expect(msg).to.include('Please enter a valid email address.')
-        })
-        //cy.get(this.email).type(ml).eq(0).should('include', 'Please enter a valid email address.');
-    }
-
-    /**            ----------------------------          email validation       --------------- */
 
     validateFistNameField(fname){
         cy.get(this.firstName).type(fname);
@@ -130,9 +92,6 @@ class FirstRegPage extends WelcomePage{
 
     validateContinueBtn(){
         cy.get(this.continueButton).should('not.be.enabled'); 
-        // cy.get(this.continueBtnColr).invoke('css', 'color').then((color) => {
-        //     expect(color).to.equal('rgb(17, 17, 17)');
-        //   });
         super.colorValidationMethod(this.continueBtnColr, 'rgb(17, 17, 17)');
 
     }
@@ -161,11 +120,6 @@ class FirstRegPage extends WelcomePage{
         cy.get(this.step1).should('have.css', 'background-color', 'rgb(0, 83, 29)');
         //super.backgColorValidationMethod(this.step1, 'rgb(0, 83, 29)');
     }
-
-    
-
 }
-
-
 
 export default FirstRegPage;
