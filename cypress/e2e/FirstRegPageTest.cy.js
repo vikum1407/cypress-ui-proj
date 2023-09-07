@@ -14,6 +14,10 @@ describe('First Registration Page Validation', () =>{
         welcomePage.clickSkipBtn();
     });
 
+    afterEach(() => {
+        cy.clearLocalStorage();
+      });
+
     it('Validate registration step1 page', () =>{
         firstRegPage.validatePageLabel();
     });
@@ -31,7 +35,6 @@ describe('First Registration Page Validation', () =>{
     })
 
     it('Email Field Validation', () =>{
-
         cy.fixture('email.json').then((udata) =>{
             udata.forEach((uedata) =>{
                 firstRegPage.validateEmailField(uedata.val);

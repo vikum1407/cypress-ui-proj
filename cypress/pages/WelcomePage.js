@@ -16,7 +16,12 @@ class WelcomePage{
     }
 
     closeCookies(){
-        cy.get(this.cookiesbtn).click();
+        cy.get(this.cookiesbtn).should('exist').click();
+        // /*cy.get(this.cookiesbtn).should('exist').then(($coBtn) =>{
+        //     if($coBtn.length > 0){
+        //         cy.wrap($coBtn).click();
+        //     }
+        // });*/       
     }
 
     PromoValidation(){

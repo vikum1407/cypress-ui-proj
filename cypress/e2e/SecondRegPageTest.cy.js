@@ -12,11 +12,15 @@ describe('Automate Second Registration Page', () =>{
 
     beforeEach(() =>{
         cy.visit("https://www.unibet.co.uk/registration");
-        welcomePage.closeCookies();
+        //welcomePage.closeCookies();
         cy.clearCookies();
         welcomePage.clickSkipBtn();
         firstRegPage.firstPageReg();
     });
+
+    afterEach(() => {
+        cy.clearLocalStorage();
+      });
 
     it('Second Page Reg Form check', () =>{
         secondRegPage.validatePage2Label();
@@ -30,7 +34,7 @@ describe('Automate Second Registration Page', () =>{
         secondRegPage.validateJoinBtn();
     });
 
-    it.only('Validate Step2 button', ()=>{
+    it('Validate Step2 button', ()=>{
         secondRegPage.validateStep2Btn();
     })
 })
