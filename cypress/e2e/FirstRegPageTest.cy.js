@@ -9,7 +9,7 @@ describe('First Registration Page Validation', () =>{
 
     beforeEach(() =>{
         cy.visit("https://www.unibet.co.uk/registration");
-        welcomePage.closeCookies();
+        //welcomePage.closeCookies();
         cy.clearCookies();
         welcomePage.clickSkipBtn();
     });

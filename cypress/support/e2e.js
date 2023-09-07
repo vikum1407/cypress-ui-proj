@@ -27,4 +27,4 @@ cy.on("fail", (err, runnable) =>{
 cy.on('uncaught:exception', (err, runnable) =>{
     console.log(err.message)
     return false;
-});
+});  
