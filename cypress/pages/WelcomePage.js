@@ -12,17 +12,16 @@ class WelcomePage{
     }
     
     pageTitleValidation(){
-        cy.title().should('eq', 'Register with Unibet Today')
+        cy.title().should('eq', 'Join the club')
     }
 
     closeCookies(){
         cy.get(this.cookiesbtn).click();
-        cy.get(this.cookiesbtn).click();
-        /*cy.get(this.cookiesbtn).should('exist').then(($coBtn) =>{
+        /*cy.wait(this.cookiesbtn).then(($coBtn) =>{
             if($coBtn.length > 0){
                 cy.wrap($coBtn).click();
             }
-        });*/       
+        });*/     
     }
 
     PromoValidation(){
