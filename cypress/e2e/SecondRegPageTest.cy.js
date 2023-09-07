@@ -26,12 +26,11 @@ describe('Automate Second Registration Page', () =>{
         secondRegPage.checkStep1Btn();
     })
 
-    it.only('Join Button validation', () =>{
+    it('Join Button validation', () =>{
         secondRegPage.validateJoinBtn();
     });
 
-    it('Validate Step2 button', ()=>{
+    it.only('Validate Step2 button', ()=>{
         secondRegPage.validateStep2Btn();
     })
-
 })
