@@ -15,16 +15,20 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+/// <reference types="Cypress" />
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-cy.on("fail", (err, runnable) =>{
+Cypress.on("fail", (err, runnable) =>{
     console.log(err.message);
     return false;
 });
 
-cy.on('uncaught:exception', (err, runnable) =>{
-    console.log(err.message)
+
+Cypress.on("uncaught:exception", (err, runnable)=>{
+    console.log(err);
+    console.log(runnable);
+    console.log(err.message);
     return false;
-});  
+})
